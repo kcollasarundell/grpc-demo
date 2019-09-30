@@ -24,13 +24,13 @@ package helloworld;
 service Greeter {
   // Sends a greeting
   rpc SayHello(HelloRequest) returns (HelloReply) {}
-
 }
 
 // The request message containing the user's name.
 message HelloRequest {
+  reserved 2;
   string name = 1;
-  string colour = 2;
+  string better_colour = 3;
 }
 
 // The response message containing the greetings
@@ -38,4 +38,3 @@ message HelloReply {
   string message = 1;
   bool authed = 2;
 }
-
